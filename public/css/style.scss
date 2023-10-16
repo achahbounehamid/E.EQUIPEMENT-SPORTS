@@ -1,0 +1,217 @@
+// Variables de couleur
+$primary-color: #007bff;
+$border-color-default: #e9e9e9;
+$selected-border-color: #f64747;
+$selected-background: #4f99ff;
+$day-color: #404848;
+$bg-hover: #f1f1f1;
+
+// Variables de police
+$font: "Quicksand";
+$bold: "Quicksand-bold";
+
+// Réinitialisation des marges et des rembourrages
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Styles pour l'en-tête
+header {
+  display: block;
+
+  .header-main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .logo-burger {          
+display: none;
+      a {
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+      @media screen and (max-width:780px) {
+        display: block;
+        
+      }
+    }
+
+    .logo {
+      @media screen and (max-width:780px) {
+        display: none;
+      }
+      a {
+        img {
+          height: 130px;
+          width: 130px;
+          
+        }
+      }
+    }
+
+    .user,
+    .cart 
+    
+    a {
+      img {
+        height: 30px;
+      }
+    }
+    .user a,
+    .cart a {
+      text-decoration: none;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 0.95;
+      max-width: 50%;
+      padding: 0.3rem;
+      max-height: 2.4rem;
+      margin-top: 0.2rem;
+      min-height: 1.2rem;
+      align-items: center;
+
+      span {
+        color: #323232;
+        font-size: 12px;
+      }
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+
+      form {
+        display: flex;
+
+        input[type="text"] {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+
+        button {
+          background-color: $primary-color;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .categorie {
+    
+    @media screen and (max-width:780px) {
+      display: none;
+      &.active {
+      display: block;
+
+      }
+    }
+    text-transform: uppercase;
+    width: 100%;
+    background: #eaeaea;
+    padding-top: 20px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+
+    nav {
+      
+      ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        li {
+          position: relative;
+
+          a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-family: $font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding: 20px;
+            color: $selected-background;
+          }
+
+          ul {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: $selected-background;
+
+            li {
+              a {
+                padding: 10px 20px;
+                color: $day-color;
+              }
+            }
+          }
+
+          &:hover ul {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Styles pour le corps
+body {
+  #home-page {
+    height: 300px;
+  }
+}
+
+// Styles pour le pied de page
+footer {
+  @media screen and (max-width:780px) {
+    .paimenent-carte{
+      margin: 20px;
+    }
+   
+  }
+  padding-top: 20px;
+  background-color: $primary-color;
+
+  .contact a {
+    text-decoration: none;
+    display: flex;
+    color: black;
+  }
+
+  .o-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .information a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .social-media {
+    justify-content: space-evenly;
+  }
+
+  h3 {
+    text-align: center;
+    color: $day-color;
+    padding: 20px;
+  }
+}
