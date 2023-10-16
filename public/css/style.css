@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -99,8 +100,18 @@ header .categorie nav ul {
   list-style: none;
   padding: 0;
 }
+@media screen and (max-width: 780px) {
+  header .categorie nav ul {
+    flex-direction: column;
+  }
+}
 header .categorie nav ul li {
   position: relative;
+}
+@media screen and (max-width: 780px) {
+  header .categorie nav ul li {
+    margin: 15px;
+  }
 }
 header .categorie nav ul li a {
   text-decoration: none;
@@ -126,6 +137,17 @@ header .categorie nav ul li:hover ul {
 
 body #home-page {
   height: 300px;
+  min-height: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #efefef;
+}
+body #home-page .card .iamge-box {
+  height: 200px;
+}
+body #home-page .card .image-box img {
+  height: 250px;
 }
 
 footer {

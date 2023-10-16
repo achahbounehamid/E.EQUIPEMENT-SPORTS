@@ -14,6 +14,7 @@ $bold: "Quicksand-bold";
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 // Styles pour l'en-tête
@@ -25,41 +26,41 @@ header {
     justify-content: space-evenly;
     align-items: center;
 
-    .logo-burger {          
-display: none;
+    .logo-burger {
+      display: none;
+
       a {
         img {
           height: 50px;
           width: 50px;
         }
       }
-      @media screen and (max-width:780px) {
+
+      @media screen and (max-width: 780px) {
         display: block;
-        
       }
     }
 
     .logo {
-      @media screen and (max-width:780px) {
+      @media screen and (max-width: 780px) {
         display: none;
       }
+
       a {
         img {
           height: 130px;
           width: 130px;
-          
         }
       }
     }
 
     .user,
-    .cart 
-    
-    a {
+    .cart a {
       img {
         height: 30px;
       }
     }
+
     .user a,
     .cart a {
       text-decoration: none;
@@ -107,14 +108,15 @@ display: none;
   }
 
   .categorie {
-    
-    @media screen and (max-width:780px) {
-      display: none;
-      &.active {
-      display: block;
 
+    @media screen and (max-width: 780px) {
+      display: none;
+
+      &.active {
+        display: block;
       }
     }
+
     text-transform: uppercase;
     width: 100%;
     background: #eaeaea;
@@ -124,13 +126,21 @@ display: none;
     justify-content: space-around;
 
     nav {
-      
       ul {
+        @media screen and (max-width: 780px) {
+          flex-direction: column;
+        }
+
         display: flex;
         justify-content: space-around;
         list-style: none;
         padding: 0;
+
         li {
+          @media screen and (max-width: 780px) {
+            margin: 15px;
+          }
+
           position: relative;
 
           a {
@@ -165,23 +175,34 @@ display: none;
   }
 }
 
-
-
 // Styles pour le corps
 body {
   #home-page {
     height: 300px;
+    min-height: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+
+    .card .iamge-box {
+      height: 200px;
+    }
+
+    .card .image-box img {
+      height: 250px;
+    }
   }
 }
 
 // Styles pour le pied de page
 footer {
-  @media screen and (max-width:780px) {
-    .paimenent-carte{
+  @media screen and (max-width: 780px) {
+    .paimenent-carte {
       margin: 20px;
     }
-   
   }
+
   padding-top: 20px;
   background-color: $primary-color;
 
@@ -203,7 +224,6 @@ footer {
     text-decoration: none;
     color: black;
   }
-
 
   .social-media {
     justify-content: space-evenly;
