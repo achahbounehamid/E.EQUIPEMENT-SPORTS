@@ -14,7 +14,31 @@ document.addEventListener("DOMContentLoaded", function () {
         categoriesList.classList.add('active');
       }
     });
-  });
-  
 
-  // slider materiel equipemeny
+
+  // Sélectionnez les éléments du DOM
+var prevButton = document.querySelector('.prev-button');
+var nextButton = document.querySelector('.next-button');
+var slideContainer = document.querySelector('.slider-container');
+var cardWrappers = document.querySelectorAll('home-page');
+
+// Définissez une variable pour suivre l'index du slide actif
+var currentIndex = 0;
+var numVisibleCards = 3;
+
+// Ajoutez des écouteurs d'événements pour les boutons "Précédent" et "Suivant"
+prevButton.addEventListener('click', function() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    slideContainer.style.transform = 'translateX(' + (-currentIndex * 100 / numVisibleCards) + '%)';
+  }
+});
+
+nextButton.addEventListener('click', function() {
+  var numSlides = cardWrappers.length;
+  if (currentIndex < numSlides - numVisibleCards) {
+    currentIndex++;
+    slideContainer.style.transform = 'translateX(' + (-currentIndex * 100 / numVisibleCards) + '%)';
+  }
+});
+  });

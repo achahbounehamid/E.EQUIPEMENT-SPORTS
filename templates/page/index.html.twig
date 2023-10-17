@@ -1,24 +1,105 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Sports life{% endblock %}
+{% block title %}Sports life
+{% endblock %}
 
 {% block body %}
-<section id="home-page">
-   <div class="container">
-     <div class="slide-container">
-     <div class="card-wrapper">
-     <div class="card">
-     <div class="image-box">
-     <img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
-     </div>
-     </div>
+	<section id="home-page">
+	<button class="prev-button">Précédent</button>
+		<div class="container">
+			<div class="slide-container">
+				<div class="card-wrapper">
+					<div class="card">
+						<div class="image-box">
+							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
+						</div>
+						<div class="profile-details">
+							<img src="{{ asset('assets/img/logo.png') }}" alt="">
+							<div class="name-job">
+								<h3>E.Equipement Sports</h3>
+								<a href="{{ path('app_product')}}">Voir les détails</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+{# 
+		<div class="container">
+			<div class="slide-container">
+				<div class="card-wrapper">
+					<div class="card">
+						<div class="image-box">
+							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
+						</div>
+						<div class="profile-details">
+							<img src="{{ asset('assets/img/logo.png') }}" alt="">
+							<div class="name-job">
+								<h3>E.Equipement Sports</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="container">
+			<div class="slide-container">
+				<div class="card-wrapper">
+					<div class="card">
+						<div class="image-box">
+							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
+						</div>
+						<div class="profile-details">
+							<img src="{{ asset('assets/img/logo.png') }}" alt="">
+							<div class="name-job">
+								<h3>E.Equipement Sports</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-     
-     </div>
-     </div>
-   </div>  
-</section>
+    <div class="container">
+			<div class="slide-container">
+				<div class="card-wrapper">
+					<div class="card">
+						<div class="image-box">
+							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
+						</div>
+						<div class="profile-details">
+							<img src="{{ asset('assets/img/logo.png') }}" alt="">
+							<div class="name-job">
+								<h3>E.Equipement Sports</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <div class="container">
+			<div class="slide-container">
+				<div class="card-wrapper">
+					<div class="card">
+						<div class="image-box">
+							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
+						</div>
+						<div class="profile-details">
+							<img src="{{ asset('assets/img/logo.png') }}" alt="">
+							<div class="name-job">
+								<h3>E.Equipement Sports</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> #}
+		
+			<button class="next-button">Suivant</button>
+
+	</section>
 
 
 {% endblock %}

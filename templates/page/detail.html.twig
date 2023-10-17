@@ -1,0 +1,18 @@
+{# detail.html.twig #}
+<h1>Liste des produits</h1>
+
+{% if products is defined and products|length > 0 %}
+    <ul>
+        {% for product in products %}
+            <li>
+                <strong>Nom du produit:</strong> {{ product.name }}<br>
+                <strong>Description:</strong> {{ product.description }}<br>
+                <strong>Prix:</strong> {{ product.price }}<br>
+                <strong>Stock:</strong> {{ product.stock }}<br>
+                <strong>Date de création:</strong> {{ product.created_at|date('Y-m-d H:i:s') }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucun produit trouvé.</p>
+{% endif %}

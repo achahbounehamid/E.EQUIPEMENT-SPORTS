@@ -177,22 +177,79 @@ header {
 
 // Styles pour le corps
 body {
+  height: auto;
+  
+
   #home-page {
     height: 300px;
     min-height: flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #efefef;
+    background-color: grey;
+    width: 100%;
 
-    .card .iamge-box {
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      width: 300px;
+      margin: 0 20px 0 20px;
+
+      .profile-details {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        margin-top: 30px;
+        border: 2px solid;
+        border-radius: 0 0 8px 8px;
+      }
+
+      .profile-details img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+
+    }
+
+    .card .image-box {
       height: 200px;
+
     }
 
     .card .image-box img {
       height: 250px;
+      border-radius: 8px 8px 0 0;
     }
   }
+  /* ...styles slider ... */
+/* ... Vos styles existants ... */
+
+.prev-button, .next-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-button {
+  left: 10px; /* Ajustez la valeur pour positionner le bouton "Précédent" à gauche */
+}
+
+.next-button {
+  right: 10px; /* Ajustez la valeur pour positionner le bouton "Suivant" à droite */
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: #555;
+}
+
 }
 
 // Styles pour le pied de page

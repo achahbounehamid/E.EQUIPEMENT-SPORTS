@@ -28,8 +28,8 @@ class Products
     #[ORM\Column]
     private ?int $stock = null;
 
-    #[ORM\Column]
-    private ?\DateTimeImmutable $created_at = null;
+    // #[ORM\Column]
+    // private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $creat_at = null;
@@ -95,17 +95,17 @@ class Products
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
+    // public function getCreatedAt(): ?\DateTimeImmutable
+    // {
+    //     return $this->created_at;
+    // }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): static
-    {
-        $this->created_at = $created_at;
+    // public function setCreatedAt(\DateTimeImmutable $created_at): static
+    // {
+    //     $this->created_at = $created_at;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function getCreatAt(): ?\DateTimeInterface
     {
