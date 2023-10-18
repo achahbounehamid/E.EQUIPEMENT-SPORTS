@@ -6,3 +6,6 @@ controllers:
 product_detail:
     path: '/product/{id}'
     controller: App\Controller\ProductController::detail
+    # registration:
+    # path: /register
+    # controller: App\Controller\RegistrationController::register

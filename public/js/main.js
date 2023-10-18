@@ -17,28 +17,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // Sélectionnez les éléments du DOM
-var prevButton = document.querySelector('.prev-button');
-var nextButton = document.querySelector('.next-button');
-var slideContainer = document.querySelector('.slider-container');
-var cardWrappers = document.querySelectorAll('home-page');
-
-// Définissez une variable pour suivre l'index du slide actif
-var currentIndex = 0;
-var numVisibleCards = 3;
-
-// Ajoutez des écouteurs d'événements pour les boutons "Précédent" et "Suivant"
-prevButton.addEventListener('click', function() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    slideContainer.style.transform = 'translateX(' + (-currentIndex * 100 / numVisibleCards) + '%)';
-  }
-});
-
-nextButton.addEventListener('click', function() {
-  var numSlides = cardWrappers.length;
-  if (currentIndex < numSlides - numVisibleCards) {
-    currentIndex++;
-    slideContainer.style.transform = 'translateX(' + (-currentIndex * 100 / numVisibleCards) + '%)';
-  }
-});
+  new Glider(document.querySelector('.glider'), {
+    slidesToScroll: 1,
+    slidesToShow: 5.5,
+    draggable: true,
+    dots: '.dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    },
+    responsive: [
+      {
+        // screens greater than >= 775px
+        breakpoint: 1200,
+        settings: {
+          // Set to `auto` and provide item width to adjust to viewport
+          slidesToShow: 4,
+          slidesToScroll: 2,
+        }
+      },{
+        // screens greater than >= 1024px
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+       
+        }
+      }
+    ]
+  });
   });

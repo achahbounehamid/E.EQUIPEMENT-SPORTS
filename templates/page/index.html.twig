@@ -4,100 +4,168 @@
 {% endblock %}
 
 {% block body %}
+
 	<section id="home-page">
-	<button class="prev-button">Précédent</button>
-		<div class="container">
-			<div class="slide-container">
-				<div class="card-wrapper">
-					<div class="card">
-						<div class="image-box">
-							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
-						</div>
-						<div class="profile-details">
-							<img src="{{ asset('assets/img/logo.png') }}" alt="">
-							<div class="name-job">
-								<h3>E.Equipement Sports</h3>
-								<a href="{{ path('app_product')}}">Voir les détails</a>
+		<div class="p-slider">
+			<h3 class="product-slider-heading">Equipement Sportif</h3>
+
+
+			<div class="glider-contain">
+				<div class="glider">
+
+					<div class="product-box">
+						<div class="p-img-container">
+							<div class="p-img">
+								<a href="{{ path( 'app_product' )}}">
+									<img
+									src="{{ asset('assets/img/machine-basketball.png') }}" class="p-img-front" alt="front">
+								{# <img src="{{ asset('assets/img/machine-basketball.png') }}"  class="p-img-back" alt="back"> #}
+								</a>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-{# 
-		<div class="container">
-			<div class="slide-container">
-				<div class="card-wrapper">
-					<div class="card">
-						<div class="image-box">
-							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
-						</div>
-						<div class="profile-details">
-							<img src="{{ asset('assets/img/logo.png') }}" alt="">
-							<div class="name-job">
-								<h3>E.Equipement Sports</h3>
+						<div class="p-box-text">
+							<div class="product-category">
+								<span>Machine de shoot Dr.Dish REBEL +</span>
+							</div>
+							<a href="" class="product-title">Voir le detail</a>
+							<div class="price-buy">
+								<span class="p-price">105000£</span>
+								<a href="" class="p-buy-btn">buy Now</a>
 							</div>
 						</div>
+
 					</div>
+
+
+					<div class="product-box">
+						<div class="p-img-container">
+							<div class="p-img">
+								<a href="{{ path( 'app_product' )}}">
+									<img
+									src="{{ asset('assets/img/machine-basketball.png') }}" class="p-img-front" alt="front">
+								{# <img src="{{ asset('assets/img/machine-basketball.png') }}"  class="p-img-back" alt="back"> #}
+								</a>
+							</div>
+						</div>
+						<div class="p-box-text">
+							<div class="product-category">
+								<span>Produit1</span>
+							</div>
+							<a href="" class="product-title">Voir le detail</a>
+							<div class="price-buy">
+								<span class="p-price">105000£</span>
+								<a href="" class="p-buy-btn">buy Now</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="product-box">
+						<div class="p-img-container">
+							<div class="p-img">
+								<a href="{{ path( 'app_product' )}}">
+									<img
+									src="{{ asset('assets/img/machine-basketball.png') }}" class="p-img-front" alt="front">
+								{# <img src="{{ asset('assets/img/machine-basketball.png') }}"  class="p-img-back" alt="back"> #}
+								</a>
+							</div>
+						</div>
+						<div class="p-box-text">
+							<div class="product-category">
+								<span>Produit1</span>
+							</div>
+							<a href="" class="product-title">Voir le detail</a>
+							<div class="price-buy">
+								<span class="p-price">105000£</span>
+								<a href="" class="p-buy-btn">buy Now</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="product-box">
+						<div class="p-img-container">
+							<div class="p-img">
+								<a href="{{ path( 'app_product' )}}">
+									<img
+									src="{{ asset('assets/img/machine-basketball.png') }}" class="p-img-front" alt="front">
+								{# <img src="{{ asset('assets/img/machine-basketball.png') }}"  class="p-img-back" alt="back"> #}
+								</a>
+							</div>
+						</div>
+						<div class="p-box-text">
+							<div class="product-category">
+								<span>Produit1</span>
+							</div>
+							<a href="" class="product-title">Voir le detail</a>
+							<div class="price-buy">
+								<span class="p-price">105000£</span>
+								<a href="" class="p-buy-btn">buy Now</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="product-box">
+						<div class="p-img-container">
+							<div class="p-img">
+								<a href="{{ path( 'app_product' )}}">
+									<img
+									src="{{ asset('assets/img/machine-basketball.png') }}" class="p-img-front" alt="front">
+								{# <img src="{{ asset('assets/img/machine-basketball.png') }}"  class="p-img-back" alt="back"> #}
+								</a>
+							</div>
+						</div>
+						<div class="p-box-text">
+							<div class="product-category">
+								<span>Produit1</span>
+							</div>
+							<a href="" class="product-title">Voir le detail</a>
+							<div class="price-buy">
+								<span class="p-price">105000£</span>
+								<a href="" class="p-buy-btn">buy Now</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="product-box">
+						<div class="p-img-container">
+							<div class="p-img">
+								<a href="{{ path( 'app_product' )}}">
+									<img
+									src="{{ asset('assets/img/machine-basketball.png') }}" class="p-img-front" alt="front">
+								{# <img src="{{ asset('assets/img/machine-basketball.png') }}"  class="p-img-back" alt="back"> #}
+								</a>
+							</div>
+						</div>
+						<div class="p-box-text">
+							<div class="product-category">
+								<span>Produit1</span>
+							</div>
+							<a href="" class="product-title">Voir le detail</a>
+							<div class="price-buy">
+								<span class="p-price">105000£</span>
+								<a href="" class="p-buy-btn">buy Now</a>
+							</div>
+						</div>
+
+					</div>
+
 				</div>
+
+
 			</div>
+			<div class="slider-btns">
+				<button aria-label="Previous" class="glider-prev">
+					<span><</span></button>
+					<button aria-label="Next"class="glider-next"><span>></span>
+
+				</button>
+
+			</div>
+
 		</div>
 
-		<div class="container">
-			<div class="slide-container">
-				<div class="card-wrapper">
-					<div class="card">
-						<div class="image-box">
-							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
-						</div>
-						<div class="profile-details">
-							<img src="{{ asset('assets/img/logo.png') }}" alt="">
-							<div class="name-job">
-								<h3>E.Equipement Sports</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    <div class="container">
-			<div class="slide-container">
-				<div class="card-wrapper">
-					<div class="card">
-						<div class="image-box">
-							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
-						</div>
-						<div class="profile-details">
-							<img src="{{ asset('assets/img/logo.png') }}" alt="">
-							<div class="name-job">
-								<h3>E.Equipement Sports</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-    <div class="container">
-			<div class="slide-container">
-				<div class="card-wrapper">
-					<div class="card">
-						<div class="image-box">
-							<img src="{{ asset('assets/img/machine-basketball.png') }}" alt="">
-						</div>
-						<div class="profile-details">
-							<img src="{{ asset('assets/img/logo.png') }}" alt="">
-							<div class="name-job">
-								<h3>E.Equipement Sports</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> #}
-		
-			<button class="next-button">Suivant</button>
 
 	</section>
 
